@@ -27,13 +27,13 @@ irc.hashbang.sh/6697 #!, #!social, #!rpg
 ## Running the server
 ```
 cd server/
-lua server.lua
+lua server.lua port
 ```
 
 ## Running the client
 ```
 cd client/
-love .
+love . ip port username
 ```
 
 ### What about built packages?
