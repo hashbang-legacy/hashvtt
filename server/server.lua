@@ -2,12 +2,12 @@ package.path = package.path .. ";../lib/?.lua"
 
 local socket = require("socket")
 local copas  = require("copas")
-local helper = require("helper")
-local conf   = require("conf")
-local dice   = require("dice")
+local helper = require("lib.helper")
+local conf   = require("server.conf")
+local dice   = require("lib.dice")
 
-require("tserial")
-require("funcs") -- Random useful functions
+require("lib.tserial")
+require("lib.funcs") -- Random useful functions
 
 local hvtt = {}
 

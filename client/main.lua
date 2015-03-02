@@ -1,16 +1,17 @@
 package.path = package.path .. ";../lib/?.lua"
 
+require("lib.funcs")
+require("lib.tserial")
+
 Socket    = require("socket")
-Gamestate = require("gamestate")
-Timer     = require("timer")
-Camera    = require("camera")
+Gamestate = require("lib.gamestate")
+Timer     = require("lib.timer")
+Camera    = require("lib.camera")
 Chat      = require("classes.chat")
-helper    = require("helper")
+helper    = require("lib.helper")
+GUI       = require("lib.gui8")
 
 ClientConf = require("client_conf")
-
-require("funcs")
-require("tserial")
 
 -- Load Gamestates
 for i,v in ipairs(love.filesystem.getDirectoryItems("gamestates/")) do
@@ -19,5 +20,5 @@ end
 
 function love.load()
   Gamestate.registerEvents()
-  Gamestate.switch(game, arg[2], arg[3], arg[4])
+  Gamestate.switch(menu)
 end
